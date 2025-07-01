@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vite.dev/config/
+// Reemplaza con tu nombre de usuario y repositorio
 export default defineConfig({
+  base: '/BodegaDeportiva/',
   plugins: [react()],
 })
