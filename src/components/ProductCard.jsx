@@ -1,21 +1,20 @@
 import React from 'react';
-import Layout from '../components/Layout';
 
 const ProductCard = ({ producto, onEditar, onEliminar }) => {
   return (
     <div className="card h-100 shadow-sm">
-<img
-  src={producto.imagen}
-  className="card-img-top img-fluid"
-  alt={producto.nombre}
-  style={{
-    objectFit: 'contain',
-    height: '180px',
-    width: '100%',
-    backgroundColor: '#f8f9fa',
-    padding: '5px'
-  }}
-/>
+      <img
+        src={producto.imagen}
+        className="card-img-top img-fluid"
+        alt={producto.nombre}
+        style={{
+          objectFit: 'contain',
+          height: '180px',
+          width: '100%',
+          backgroundColor: '#f8f9fa',
+          padding: '5px'
+        }}
+      />
 
       <div className="card-body">
         <h5 className="card-title">{producto.nombre}</h5>
@@ -41,10 +40,4 @@ const ProductCard = ({ producto, onEditar, onEliminar }) => {
   );
 };
 
-export default function Productos() {
-  return (
-    <Layout>
-      {/* Todo tu contenido actual de productos va aquí */}
-    </Layout>
-  );
-}
+export default ProductCard;
