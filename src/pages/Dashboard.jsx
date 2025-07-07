@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Sidebar from '../components/Sidebar';
 import './Dashboard.css';
+import Layout from '../components/Layout';
 
 export default function Dashboard() {
   const usuario = JSON.parse(localStorage.getItem('usuario'));
@@ -12,6 +13,11 @@ export default function Dashboard() {
         <Header />
         <h2 className="mb-4">🎉 Bienvenido, {usuario?.usuario}</h2>
         <p className="mb-4">Rol: {usuario?.rol}</p>
+
+    <Layout>
+      <h2>Bienvenido, {usuario?.usuario}</h2>
+      <p>Rol: {usuario?.rol}</p>
+    </Layout>
 
         <div className="row row-cols-1 row-cols-md-3 g-4">
           <div className="col">

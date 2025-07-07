@@ -1,10 +1,8 @@
 import { Link, useLocation } from 'react-router-dom';
 import './Sidebar.css';
-import { useState } from 'react';
 
-export default function Sidebar() {
+export default function Sidebar({ colapsado, setColapsado }) {
   const location = useLocation();
-  const [colapsado, setColapsado] = useState(false);
 
   return (
     <div className={`sidebar ${colapsado ? 'collapsed' : ''}`}>
@@ -17,8 +15,8 @@ export default function Sidebar() {
       </div>
 
       <ul className="sidebar-menu">
-        <li className={location.pathname === '/ard' ? 'active' : ''}>
-          <Link to="/dashboard">🏠 {colapsado ? '' : 'Presentacion'}</Link>
+        <li className={location.pathname === '/dashboard' ? 'active' : ''}>
+          <Link to="/dashboard">🏠 {colapsado ? '' : 'Presentación'}</Link>
         </li>
         <li className={location.pathname === '/productos' ? 'active' : ''}>
           <Link to="/productos">🧺 {colapsado ? '' : 'Administrar Productos'}</Link>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout from '../components/Layout';
 
 const ProductCard = ({ producto, onEditar, onEliminar }) => {
   return (
@@ -40,4 +41,10 @@ const ProductCard = ({ producto, onEditar, onEliminar }) => {
   );
 };
 
-export default ProductCard;
+export default function Productos() {
+  return (
+    <Layout>
+      {/* Todo tu contenido actual de productos va aquí */}
+    </Layout>
+  );
+}

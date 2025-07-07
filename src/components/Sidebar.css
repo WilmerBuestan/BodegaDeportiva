@@ -1,14 +1,23 @@
+/* Sidebar.css */
 .sidebar {
-  background-color: #212529;
-  color: white;
-  height: 100vh;
-  width: 220px;
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1rem;
-  transition: all 0.3s ease;
+  height: 100vh;
+  background-color: #343a40;
+  color: white;
+  padding: 10px;
+  transition: width 0.3s ease;
   z-index: 1000;
+  overflow-x: hidden;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.sidebar:not(.collapsed) {
+  width: 220px;
 }
 
 .sidebar.collapsed {
